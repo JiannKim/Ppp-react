@@ -19,10 +19,12 @@ class App extends Component {
                 <span className="me-info-birth">1 9 9 2 <span className="year">年</span> 8 月 4 日</span>
               </div>
               <div className="me__column me__column-info">
-                <span className="me-info-github">__jiannkim.github.io</span>
+                <span className="me-info-github">_________ jiannkim.github.io</span>
               </div>
             </div>
-            <div className="me__column kakao"><Kakao_clone /></div>
+            <div className="me__column kakao">
+              <a><Kakao_clone /></a><Kakao_clone />
+            </div>
           </div>
         </div>
       </body>
