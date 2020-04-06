@@ -1,33 +1,26 @@
 import React, { Component } from 'react';
 import './App.css';
 import Kakao_clone from './components/Kakao_clone';
+import Index from './components/Index';
+import Content from './components/Content';
+// import Lush from './components/Lush';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      index:{title:'JAMONG', sub:'Ppp!!!'},
+      contents:{title:'Kakao클론', desc:'오알왈왈왈'}
+    }
+  }
   render() {
     return (
-      <body onload="printClock()">
-        <div className="header">
-          <div className="status__column">
-            <span className="status__clock" id="clock"></span>
-          </div>
-          <div className="main">
-            <div className="me__column">
-              <div className="me__column me__column-info">
-                <span className="me-info-nick">kim_자몽</span>
-              </div>
-              <div className="me__column me__column-info">
-                <span className="me-info-birth">1 9 9 2 <span className="year">年</span> 8 月 4 日</span>
-              </div>
-              <div className="me__column me__column-info">
-                <span className="me-info-github">_________ jiannkim.github.io</span>
-              </div>
-            </div>
-            <div className="me__column kakao">
-              <a><Kakao_clone /></a><Kakao_clone />
-            </div>
-          </div>
-        </div>
-      </body>
+      <div>
+        <Index title={this.state.index.title} sub={this.state.index.sub} />
+        <Kakao_clone />
+        <Content  title={this.state.contents.title} desc={this.state.contents.desc}></Content>
+        {/* <Lush /> */}
+      </div>
     );
   }
 }
